@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 
+<<<<<<< HEAD
 import {
   doc,
   setDoc,
@@ -47,6 +48,10 @@ const New = ({ inputs, title }) => {
       console.log(error);
     }
   };
+=======
+const New = ({ inputs, title }) => {
+  const [file, setFile] = useState("");
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
 
   return (
     <div className="new">
@@ -68,7 +73,11 @@ const New = ({ inputs, title }) => {
             />
           </div>
           <div className="right">
+<<<<<<< HEAD
             <form onSubmit={handleAdd}>
+=======
+            <form>
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
               <div className="formInput">
                 <label htmlFor="file">
                   Image: <DriveFolderUploadOutlinedIcon className="icon" />
@@ -84,6 +93,7 @@ const New = ({ inputs, title }) => {
               {inputs.map((input) => (
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
+<<<<<<< HEAD
                   <input
                     id={input.id}
                     type={input.type}
@@ -93,6 +103,12 @@ const New = ({ inputs, title }) => {
                 </div>
               ))}
               <button type="submit">Send</button>
+=======
+                  <input type={input.type} placeholder={input.placeholder} />
+                </div>
+              ))}
+              <button>Send</button>
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
             </form>
           </div>
         </div>

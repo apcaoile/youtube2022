@@ -1,10 +1,14 @@
 import "./widget.scss";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+<<<<<<< HEAD
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowUp";
+=======
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
@@ -17,6 +21,15 @@ const Widget = ({ type }) => {
   //temporary date
   // const amount = 100;
   // const diff = 20;
+=======
+
+const Widget = ({ type }) => {
+  let data;
+
+  //temporary
+  const amount = 100;
+  const diff = 20;
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
 
   switch (type) {
     case "user":
@@ -24,7 +37,10 @@ const Widget = ({ type }) => {
         title: "USERS",
         isMoney: false,
         link: "See all users",
+<<<<<<< HEAD
         query: "users",
+=======
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -65,12 +81,20 @@ const Widget = ({ type }) => {
         ),
       };
       break;
+<<<<<<< HEAD
     case "product":
       data = {
         title: "PRODUCTS",
         //      isMoney: true,
         link: "See details",
         query: "products",
+=======
+    case "balance":
+      data = {
+        title: "BALANCE",
+        isMoney: true,
+        link: "See details",
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
         icon: (
           <AccountBalanceWalletOutlinedIcon
             className="icon"
@@ -86,6 +110,7 @@ const Widget = ({ type }) => {
       break;
   }
 
+<<<<<<< HEAD
   useEffect(() => {
     const fetchData = async () => {
       const today = new Date();
@@ -122,6 +147,8 @@ const Widget = ({ type }) => {
     fetchData();
   }, []);
 
+=======
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
   return (
     <div className="widget">
       <div className="left">
@@ -132,8 +159,13 @@ const Widget = ({ type }) => {
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
+<<<<<<< HEAD
         <div className={`percentage ${diff < 0 ? "negative" : "postive"}`}>
           {diff < 0 ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
+=======
+        <div className="percentage positive">
+          <KeyboardArrowUpIcon />
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
           {diff} %
         </div>
         {data.icon}

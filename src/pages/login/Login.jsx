@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import "./login.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -51,3 +52,14 @@ const Login = () => {
 };
 
 export default Login;
+=======
+import "./login.scss"
+
+const Login = () => {
+  return (
+    <div>Login</div>
+  )
+}
+
+export default Login
+>>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
