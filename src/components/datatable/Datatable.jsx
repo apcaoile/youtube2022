@@ -2,7 +2,6 @@ import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { collection, getDocs, deleteDoc, doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
@@ -58,15 +57,6 @@ const Datatable = () => {
       console.log(error);
     }
     //    setData(data.filter((item) => item.id !== id));  Dummy data filter
-=======
-import { useState } from "react";
-
-const Datatable = () => {
-  const [data, setData] = useState(userRows);
-
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
->>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
   };
 
   const actionColumn = [

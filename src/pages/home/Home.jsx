@@ -16,11 +16,7 @@ const Home = () => {
           <Widget type="user" />
           <Widget type="order" />
           <Widget type="earning" />
-<<<<<<< HEAD
           <Widget type="product" />
-=======
-          <Widget type="balance" />
->>>>>>> b9226c6de61075bdf238df1282a6f2519b3a40a5
         </div>
         <div className="charts">
           <Featured />
